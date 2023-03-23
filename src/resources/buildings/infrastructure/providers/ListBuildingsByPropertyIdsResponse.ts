@@ -1,0 +1,158 @@
+export type ListBuildingsByPropertyIdsResponse = Array<{
+  id: string;
+  nanoId: string;
+  addressHash: string;
+  pin: number;
+  overview: {
+    zip: string;
+    area: string;
+    city: string;
+    info?: any;
+    name: string;
+    email: string;
+    metro: string;
+    phone: string;
+    state: string;
+    appFee: number;
+    county: string;
+    floors: number;
+    maxBed: number;
+    minBed: number;
+    promos?: any;
+    address: string;
+    maxRent: number;
+    minRent: number;
+    website: string;
+    cashback: number;
+    unitCount: number;
+    yearBuilt: number;
+    coordinates: {
+      type: string;
+      coordinates: number[];
+    };
+    leaseLength: string;
+    onSiteManager: string;
+    yearRenovated?: number;
+    uniqueFeatures?: any;
+    foobarScore: number;
+    longDescription?: any;
+    nonRefundableFee: number;
+    percentOccupancy: number;
+    shortDescription?: any;
+    propertyManagerName: string;
+  };
+  amenities: {
+    name: string;
+    level: string;
+    popularity: number;
+  }[];
+  commissions: {
+    note: string;
+    type: string;
+    bonus: number;
+    minLease: number;
+    leaseLength: any[];
+    escortRequired: boolean;
+    monthPercentage: number;
+  }[];
+  floorplans: {
+    name: string;
+    units: {
+      minRent: number;
+      minSqft: number;
+      numBeds: number;
+      numBaths: number;
+      minDeposit: number;
+      availableOn: Date;
+    }[];
+    photos: any[];
+    deposit: number;
+    rentAvg: number;
+    sqftAvg: number;
+    rentRange: {
+      value: number;
+      inclusive: boolean;
+    }[];
+    sqftRange?: any;
+    unitsCount?: any;
+    availability: Date;
+    bedroomCount: number;
+    bathroomCount: number;
+    unitsAvailable?: any;
+  }[];
+  parking: {
+    type: string;
+  }[];
+  petPolicies: {
+    count: number;
+    weight: number;
+    deposit: number;
+    petType: string;
+    interview: string;
+    monthlyFee: number;
+    description: string;
+    applicationFee: number;
+    breedRestriction: string;
+  }[];
+  photos: {
+    url: string;
+    rank: number;
+    format: string;
+    rawUrl: string;
+    isActive: boolean;
+    width?: any;
+    height?: any;
+    status: string;
+  }[];
+  policy: {
+    gasPaid: boolean;
+    section8: boolean;
+    specials: string;
+    cablePaid: boolean;
+    coSigners: boolean;
+    taxCredit: boolean;
+    trashPaid: boolean;
+    waterPaid: boolean;
+    creditCheck: boolean;
+    acceptFelons: boolean;
+    allBillsPaid: boolean;
+    electricPaid: boolean;
+    paymentInDays?: number;
+    seniorHousing: boolean;
+    seniorDiscount: boolean;
+    studentHousing: boolean;
+    acceptEvictions: boolean;
+    pestControlPaid: boolean;
+    corporateHousing: boolean;
+    firstTimeRenters: boolean;
+    acceptFelonsNotes: string;
+    incomeRequirement: string;
+    incomeRestriction: boolean;
+    acceptBankruptcies: boolean;
+    acceptBrokenLeases: boolean;
+    acceptForeclosures: boolean;
+    acceptMisdemeanors: boolean;
+    registrationMethod: string;
+    computerizedPricing: boolean;
+    acceptEvictionsNotes: string;
+    sixMonthLeasePremium: string;
+    acceptBankruptciesNotes: string;
+    acceptBrokenLeasesNotes: string;
+    acceptForeclosuresNotes: string;
+    acceptMisdemeanorsNotes: string;
+  };
+  school: {
+    high: string;
+    middle: string;
+    district: string;
+    elementary: string;
+  };
+  sources: {
+    feedName: string;
+    externalId: string;
+  }[];
+  createdAt: Date;
+  updatedAt: Date;
+  deletedAt?: any;
+  elastic: boolean;
+}>;
